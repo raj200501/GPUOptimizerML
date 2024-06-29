@@ -19,60 +19,64 @@ The GPU Optimizer for ML Models is a comprehensive platform designed to improve 
 - **Real-time Monitoring**: Monitor GPU utilization and performance in real-time.
 - **Secure API**: Securely manage models and GPU resources via a robust API.
 
-## Project Structure
+# Project Structure
+
+The GPU Optimizer for ML Models project is organized into several directories and files, each serving a specific purpose. Below is a detailed breakdown of the project structure:
+
+```plaintext
 MLGpuOptimizer/
-|-- backend_api/
-| |-- config/
-| |-- config.py
-| |-- controllers/
-| |-- model_controller.py
-| |-- gpu_controller.py
-| |-- models/
-| |-- model.py
-| |-- routes/
-| |-- api_routes.py
-| |-- services/
-| |-- gpu_service.py
-| |-- model_service.py
-| |-- utils/
-| |-- optimization.py
-| |-- app.py
-| |-- Dockerfile
-|-- data_processing/
-| |-- spark_jobs/
-| |-- data_transformation.py
-| |-- data_aggregation.py
-| |-- data_analysis.py
-| |-- hadoop_jobs/
-| |-- hadoop_config.py
-| |-- utils/
-| |-- spark_utils.py
-| |-- Dockerfile
-|-- web_interface/
-| |-- public/
-| |-- index.html
-| |-- src/
-| |-- components/
-| |-- Header.js
-| |-- Footer.js
-| |-- ModelUpload.js
-| |-- ModelMonitor.js
-| |-- GpuStats.js
-| |-- pages/
-| |-- HomePage.js
-| |-- UploadPage.js
-| |-- MonitorPage.js
-| |-- services/
-| |-- api.js
-| |-- App.js
-| |-- index.js
-| |-- App.css
-| |-- Dockerfile
-|-- db_init/
-| |-- init.sql
-|-- scripts/
-| |-- deploy.sh
-|-- README.md
+├── backend_api/
+│   ├── config/
+│   │   └── config.py
+│   ├── controllers/
+│   │   ├── model_controller.py
+│   │   └── gpu_controller.py
+│   ├── models/
+│   │   └── model.py
+│   ├── routes/
+│   │   └── api_routes.py
+│   ├── services/
+│   │   ├── gpu_service.py
+│   │   └── model_service.py
+│   ├── utils/
+│   │   └── optimization.py
+│   ├── app.py
+│   └── Dockerfile
+├── data_processing/
+│   ├── spark_jobs/
+│   │   ├── data_transformation.py
+│   │   ├── data_aggregation.py
+│   │   └── data_analysis.py
+│   ├── hadoop_jobs/
+│   │   └── hadoop_config.py
+│   ├── utils/
+│   │   └── spark_utils.py
+│   └── Dockerfile
+├── web_interface/
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Header.js
+│   │   │   ├── Footer.js
+│   │   │   ├── ModelUpload.js
+│   │   │   ├── ModelMonitor.js
+│   │   │   └── GpuStats.js
+│   │   ├── pages/
+│   │   │   ├── HomePage.js
+│   │   │   ├── UploadPage.js
+│   │   │   └── MonitorPage.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── App.css
+│   └── Dockerfile
+├── db_init/
+│   └── init.sql
+├── scripts/
+│   └── deploy.sh
+├── README.md
 
 
 ## Installation
