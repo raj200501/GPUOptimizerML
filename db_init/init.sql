@@ -1,0 +1,10 @@
+CREATE DATABASE gpu_optimizer_ml;
+
+USE gpu_optimizer_ml;
+
+CREATE TABLE model (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
