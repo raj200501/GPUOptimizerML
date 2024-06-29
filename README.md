@@ -77,8 +77,7 @@ MLGpuOptimizer/
 ├── scripts/
 │   └── deploy.sh
 ├── README.md
-
-
+```
 ## Installation
 
 ### Prerequisites
