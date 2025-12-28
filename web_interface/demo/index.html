@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPU Optimizer Demo</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>GPU Optimizer for ML Models</h1>
+        <p>Demo dashboard: upload, monitor, and view GPU stats.</p>
+      </header>
+
+      <section class="card">
+        <h2>Upload Model</h2>
+        <form id="upload-form">
+          <input type="file" id="model-file" required />
+          <button type="submit">Upload</button>
+        </form>
+        <p id="upload-status" class="status"></p>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Monitor Models</h2>
+          <ul id="model-list" class="list"></ul>
+        </div>
+        <div class="card">
+          <h2>GPU Stats</h2>
+          <ul id="gpu-stats" class="list"></ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

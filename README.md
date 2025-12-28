@@ -174,6 +174,61 @@ If you have any further questions or need assistance, feel free to reach out to 
 
 Happy coding!
 
+## ✅ Verified Quickstart (Local, no Docker)
+
+These steps were verified in a clean environment without Docker by running the backend locally and using SQLite for persistence.
+
+```sh
+python -m pip install -r backend_api/requirements.txt
+./scripts/run_backend.sh
+```
+
+Then visit:
+- API base: `http://localhost:5000/api`
+- GPU stats: `http://localhost:5000/api/gpu/stats`
+
+To run the React web interface locally (requires Node.js + npm with registry access):
+
+```sh
+cd web_interface
+npm install
+npm start
+```
+
+## Smoke Test
+
+Run a basic API verification:
+
+```sh
+./scripts/smoke_test.sh
+```
+
+## ✅ Verified Offline Demo (No External Dependencies)
+
+If you need a fully runnable, dependency-free demo (no Docker, no pip, no npm), use the built-in demo server:
+
+```sh
+./scripts/run_demo.sh
+```
+
+Then open `http://localhost:8080` to access the demo dashboard with upload, monitor, and GPU stats panels.
+
+To verify the demo server automatically:
+
+```sh
+./scripts/smoke_test_demo.sh
+```
+
+The demo server uses the same API paths (`/api/model/upload`, `/api/model/monitor`, `/api/gpu/stats`) and stores data in `backend_api/demo.db`.
+
+## Troubleshooting
+
+- **Docker not available**: If `docker --version` fails, use the Verified Quickstart above to run locally.
+- **No GPU / `nvidia-smi` missing**: The `/api/gpu/stats` endpoint returns a zeroed placeholder with a note.
+- **Torch/TensorRT not installed**: Model optimization falls back to a safe copy and still marks the model as optimized.
+- **Database connection errors**: By default, the backend uses SQLite at `backend_api/gpu_optimizer.db`. You can override with `DATABASE_URL` or `SQLALCHEMY_DATABASE_URI`.
+- **No dependency environment**: Use `./scripts/run_demo.sh` to run a full demo without Docker, pip, or npm.
+
 
    
    
